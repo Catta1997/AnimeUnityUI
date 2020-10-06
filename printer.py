@@ -1,12 +1,8 @@
 import colorama
 import os
-import platform
 from shutil import which
-from platform import system
 from youtube_dl import YoutubeDL
-from tqdm import trange
 from tqdm import tqdm
-from time import sleep
 from AnimeUnityEngine import logging_aux, common_classes
 import sys
 import re
@@ -72,7 +68,7 @@ def vvvvid_downloader(config,anime):
             "outtmpl": "%s/%s.%%(ext)s" % (content_dir, title),
             "continuedl": True,
             "quiet" : True,
-            #"simulate":True, # Debug: simulate a dowload 
+            #"simulate":True, # Debug: simulate a dowload
         }
         if ffmpeg_local:
             ydl_opts["ffmpeg_location"] = ffmpeg_local

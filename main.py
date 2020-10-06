@@ -51,8 +51,7 @@ def cli_mode():
     argv = sys.argv[1:]
 
     try:
-        opts, args = getopt.getopt(argv, 'k:s:p:hv',
-                                   ['printlevel=', 'keyword=', 'crawlpath=', 'jdownloadpath=', 'season=', 'loglevel=','help','version', 'filelog'])
+        opts = getopt.getopt(argv, 'k:s:p:hv', ['printlevel=', 'keyword=', 'crawlpath=', 'jdownloadpath=', 'season=', 'loglevel=','help','version', 'filelog'])
     except getopt.GetoptError:
         # stampa l'informazione di aiuto ed esce:
         usage()
